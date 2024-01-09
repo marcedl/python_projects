@@ -6,17 +6,17 @@ while True:
     todo = user_action[4:]
 
     #context manager
-    with open('/Users/marcela/Documents/Cursos/Python Mega Course Build 20 Apps/app01_to_do_app/todos.txt', 'r') as file:
+    with open(r'.../todos.txt', 'r') as file:
       todos = file.readlines()
 
     todos.append(todo)
     
-    with open('/Users/marcela/Documents/Cursos/Python Mega Course Build 20 Apps/app01_to_do_app/todos.txt', 'w') as file:
+    with open(r'.../todos.txt', 'w') as file:
       file.writelines(todos)
 
   if 'show' in user_action: 
 
-    with open('/Users/marcela/Documents/Cursos/Python Mega Course Build 20 Apps/app01_to_do_app/todos.txt', 'r') as file:
+    with open(r'.../todos.txt', 'r') as file:
       todos = file.readlines()
 
     for index, i in enumerate(todos): 
@@ -28,19 +28,19 @@ while True:
     number = int(input("Number of the todo to edit: "))
     number = number - 1
     #Open the txt file 
-    with open('/Users/marcela/Documents/Cursos/Python Mega Course Build 20 Apps/app01_to_do_app/todos.txt', 'r') as file:
+    with open(r'.../todos.txt', 'r') as file:
       todos = file.readlines()
 
     new_todo = input("Enter a new to do: ")
     todos[number] = new_todo + '\n' 
     
-    with open('/Users/marcela/Documents/Cursos/Python Mega Course Build 20 Apps/app01_to_do_app/todos.txt', 'w') as file:
+    with open(r'.../todos.txt', 'w') as file:
       file.writelines(todos)
   
   if 'complete' in user_action:
     complete = input("Enter the number of the completed to do: ")
 
-    with open('/Users/marcela/Documents/Cursos/Python Mega Course Build 20 Apps/app01_to_do_app/todos.txt', 'r') as file:
+    with open(r'.../todos.txt', 'r') as file:
       todos = file.readlines()
     
     completed = int(complete) - 1
