@@ -7,17 +7,17 @@ while True:
   match user_action:
     case 'add':
       todo = input("Enter a to do: ") + "\n"
-      file = open(r'/Users/marcela/Documents/Cursos/Python Mega Course Build 20 Apps/app01_to_do_app/todos.txt', 'r') #first read the file
+      file = open(r'.../todos.txt', 'r') #first read the file
       todos = file.readlines() #file.read() for strings, readlines for list format
       file.close()
       
       todos.append(todo)
       
-      file = open(r'/Users/marcela/Documents/Cursos/Python Mega Course Build 20 Apps/app01_to_do_app/todos.txt', 'w') #then overwrite the file
+      file = open(r'.../todos.txt', 'w') #then overwrite the file
       file.writelines(todos) #file.write for strings
       file.close()
     case 'show': 
-      file = open(r'/Users/marcela/Documents/Cursos/Python Mega Course Build 20 Apps/app01_to_do_app/todos.txt', 'r')
+      file = open(r'.../todos.txt', 'r')
       todos = file.readlines()
       file.close()
       """ long block
