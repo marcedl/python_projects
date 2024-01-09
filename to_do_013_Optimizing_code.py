@@ -7,17 +7,17 @@ while True:
     todo = todo + "\n"
 
     #context manager
-    with open(r"C:\Users\leona\OneDrive\Escritorio\Python Mega Course Build 20 Apps\app01_to_do_app\todos.txt", "r") as file:
+    with open(r'.../todos.txt', 'r') as file:
       todos = file.readlines()
 
     todos.append(todo)
     
-    with open(r"C:\Users\leona\OneDrive\Escritorio\Python Mega Course Build 20 Apps\app01_to_do_app\todos.txt", 'w') as file:
+    with open(r'.../todos.txt', 'w') as file:
       file.writelines(todos)
 
   elif 'show' in user_action: 
 
-    with open(r"C:\Users\leona\OneDrive\Escritorio\Python Mega Course Build 20 Apps\app01_to_do_app\todos.txt", "r") as file:
+    with open(r'.../todos.txt', 'r') as file:
       todos = file.readlines()
 
     for index, i in enumerate(todos): 
@@ -29,19 +29,19 @@ while True:
     number = int(user_action[5:])
     number = number - 1
     #Open the txt file 
-    with open(r"C:\Users\leona\OneDrive\Escritorio\Python Mega Course Build 20 Apps\app01_to_do_app\todos.txt", 'r') as file:
+    with open(r'.../todos.txt', 'r') as file:
       todos = file.readlines()
 
     new_todo = input("Enter a new to do: ")
     todos[number] = new_todo + '\n' 
     
-    with open(r"C:\Users\leona\OneDrive\Escritorio\Python Mega Course Build 20 Apps\app01_to_do_app\todos.txt", 'w') as file:
+    with open(r'.../todos.txt', 'w') as file:
       file.writelines(todos)
   
   elif 'complete' in user_action:
     complete = int(user_action[9:])
 
-    with open(r"C:\Users\leona\OneDrive\Escritorio\Python Mega Course Build 20 Apps\app01_to_do_app\todos.txt", 'r') as file:
+    with open(r'.../todos.txt', 'r') as file:
       todos = file.readlines()
     
     completed = complete - 1
